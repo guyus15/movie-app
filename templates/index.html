@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block content %} 
+    <h2>Popular Films</h2>
+
+    <p>{{films}}</p>
+
+    <p class="film-title">{{films['Title']}} ({{films['Year']}})</p>
+    <p class="film-runtime">{{films['Runtime']}}</p>
+    <img src="{{films['Poster']}}" alt="Film image">
+    <p class="film-description">{{films['Plot']}}</p>
+    <p class="film-cast">{{films['Actors']}}</p>
+{% endblock %}
