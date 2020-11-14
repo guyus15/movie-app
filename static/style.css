@@ -37,3 +37,25 @@ nav {
 .container {
     margin:50px;
 }
+
+.film-container {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr)
+}
+
+.film {
+    max-width: 300px;
+}
+
+.film-title {
+    height:75px;
+    overflow-y:scroll;
+}
+
+.film-title::-webkit-scrollbar {
+    display:none;
+}
+
+.film img {
+    min-width: 100%;
+}
