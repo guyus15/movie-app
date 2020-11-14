@@ -5,7 +5,7 @@ app = Flask('__name__')
 
 @app.route('/')
 def index():
-    films = requests.get('http://www.omdbapi.com/?apikey=501fb2ae&s=Game%20of%20Thrones')
+    films = requests.get('http://www.omdbapi.com/?apikey=501fb2ae&s=Game%20of%20Thrones&plot=short')
     films = films.json()['Search']
 
     return render_template('index.html', films=films)
