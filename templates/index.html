@@ -5,9 +5,11 @@
 
     <div class="film-container">
         {% for film in films %}
-        <p class="film-title">{{film['Title']}} ({{film['Year']}})</p>
-        <p class="film-runtime">{{film['Runtime']}}</p>
-        <img src="{{film['Poster']}}" alt="Film image">
+        <div class="film">
+            <p class="film-title">{{film['Title']}} ({{film['Year']}})</p>
+            <p class="film-runtime">{{film['Runtime']}}</p>
+            <img src="{{film['Poster']}}" alt="Film image">
+        </div>
         {% endfor %}
     </div>
 {% endblock %}
