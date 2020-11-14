@@ -3,11 +3,11 @@
 {% block content %} 
     <h2>Popular Films</h2>
 
-    <p>{{films}}</p>
-
-    <p class="film-title">{{films['Title']}} ({{films['Year']}})</p>
-    <p class="film-runtime">{{films['Runtime']}}</p>
-    <img src="{{films['Poster']}}" alt="Film image">
-    <p class="film-description">{{films['Plot']}}</p>
-    <p class="film-cast">{{films['Actors']}}</p>
+    <div class="film-container">
+        {% for film in films %}
+        <p class="film-title">{{film['Title']}} ({{film['Year']}})</p>
+        <p class="film-runtime">{{film['Runtime']}}</p>
+        <img src="{{film['Poster']}}" alt="Film image">
+        {% endfor %}
+    </div>
 {% endblock %}
